@@ -8,3 +8,18 @@ spec:
     image: julianocanuto/conversao-temperatura
     ports:
       - containerPort: 80
+
+---
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mypod-label
+  labels:
+    app: web
+spec:
+  containers:
+  - name: myapp
+    image: julianocanuto/conversao-temperatura
+    ports:
+      - containerPort: 80
